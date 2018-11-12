@@ -4,7 +4,7 @@ Customize Leaflet maps with a linked Google Sheets template and GeoJSON data on 
 ![Preview](preview.jpg)
 
 ## Live links (replace with your own)
-- Leaflet Map https://anneliesbaston.github.io/datacenters/
+- Leaflet Map https://anneliesbaston.github.io/Datacenters/
 - Google Sheets template https://docs.google.com/spreadsheets/d/1zNUfPAEPaIyrZBy7130TtrtPcObOCmCvDXdfjpM9HKk/edit#gid=0
 
 ## Create your own
