@@ -129,7 +129,20 @@ $(window).on('load', function() {
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           ('Products 2014:' + point['Products_14'] + ' €' + '<br>') +
-          ('Projects 2014:' + point['Projects_14'] + ' €' + '<br>'));
+          ('Projects 2014:' + point['Projects_14'] + ' €' + '<br>') +
+          ('Sourcing 2014:' + point['Sourcing_14'] + ' €' + '<br>') + 
+          ('Products 2015:' + point['Products_15'] + ' €' + '<br>') +
+          ('Projects 2015:' + point['Projects_15'] + ' €' + '<br>') +
+          ('Sourcing 2015:' + point['Sourcing_15'] + ' €' + '<br>') +
+          ('Products 2016:' + point['Products_16'] + ' €' + '<br>') + 
+          ('Products 2016:' + point['Projects_16'] + ' €' + '<br>') +
+          ('Products 2016:' + point['Sourcing_16'] + ' €' + '<br>') +
+          ('Products 2017:' + point['Products_17'] + ' €' + '<br>') +
+          ('Projects 2017:' + point['Projects_17'] + ' €' + '<br>') +
+          ('Sourcing 2017:' + point['Sourcing_17'] + ' €' + '<br>') +
+          ('Products 2018:' + point['Products_18'] + ' €' + '<br>') + 
+          ('Products 2018:' + point['Projects_18'] + ' €' + '<br>') +
+          ('Products 2018:' + point['Sourcing_18'] + ' €' + '<br>'));
 
         if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Group]);
