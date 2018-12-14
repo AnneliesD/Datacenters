@@ -128,64 +128,25 @@ $(window).on('load', function() {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
-          "<table>"+ 
-                "<tr>" + /*2014*/ 
-                    "<td>" + 'Products 2014'+ "</td>"+ 
-                    "<td>" + point['Products_14'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2014*/ 
-                    "<td>" + 'Projects 2014'+ "</td>"+ 
-                    "<td>" + point['Projects_14'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2014*/ 
-                    "<td>" + 'Sourcing 2014'+ "</td>"+ 
-                    "<td>" + point['Sourcing_14'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2015*/ 
-                    "<td>" + 'Products 2015'+ "</td>"+ 
-                    "<td>" + point['Products_15'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2015*/ 
-                    "<td>" + 'Projects 2015'+ "</td>"+ 
-                    "<td>" + point['Projects_15'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2015*/ 
-                    "<td>" + 'Sourcing 2015'+ "</td>"+ 
-                    "<td>" + point['Sourcing_15'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2016*/ 
-                    "<td>" + 'Products 2016'+ "</td>"+ 
-                    "<td>" + point['Products_16'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2016*/ 
-                    "<td>" + 'Projects 2016'+ "</td>"+ 
-                    "<td>" + point['Projects_16'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2017*/ 
-                "<td>" + 'Products 2017'+ "</td>"+ 
-                "<td>" + point['Products_17'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2017*/ 
-                    "<td>" + 'Projects 2017'+ "</td>"+ 
-                    "<td>" + point['Projects_17'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2017*/ 
-                    "<td>" + 'Sourcing 2017'+ "</td>"+ 
-                    "<td>" + point['Sourcing_17'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2018*/ 
-                "<td>" + 'Products 2018'+ "</td>"+ 
-                "<td>" + point['Products_18'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2018*/ 
-                    "<td>" + 'Projects 2018'+ "</td>"+ 
-                    "<td>" + point['Projects_18'] + ' €' + "</td>" +
-                "</tr>" +
-                "<tr>" + /*2018*/ 
-                    "<td>" + 'Sourcing 2018'+ "</td>"+ 
-                    "<td>" + point['Sourcing_18'] + ' €' + "</td>" +
-                "</tr>" +
-            + "</table>");
+           if (point.Latitude !== '' && point.Longitude !== '') {
+        var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
+          .bindPopup("<b>" + point['Name'] + '</b><br>' +
+          (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
+          ('<b>'+'Products 2014: ' +'</b>' + point['Products_14'] + ' €' + '<br>') +
+          ('<b>'+'Projects 2014: ' +'</b>' + point['Projects_14'] + ' €' + '<br>') +
+          ('<b>'+'Sourcing 2014: ' +'</b>' + point['Sourcing_14'] + ' €' + '<br>') + 
+          ('<b>'+'Products 2015: ' +'</b>' + point['Products_15'] + ' €' + '<br>') +
+          ('<b>'+'Projects 2015: ' +'</b>' + point['Projects_15'] + ' €' + '<br>') +
+          ('<b>'+'Sourcing 2015: ' +'</b>' + point['Sourcing_15'] + ' €' + '<br>') +
+          ('<b>'+'Products 2016: ' +'</b>' + point['Products_16'] + ' €' + '<br>') + 
+          ('<b>'+'Projects 2016: ' +'</b>' + point['Projects_16'] + ' €' + '<br>') +
+          ('<b>'+'Sourcing 2016: ' +'</b>' + point['Sourcing_16'] + ' €' + '<br>') +
+          ('<b>'+'Products 2017: ' +'</b>' + point['Products_17'] + ' €' + '<br>') +
+          ('<b>'+'Projects 2017: ' +'</b>' + point['Projects_17'] + ' €' + '<br>') +
+          ('<b>'+'Sourcing 2017: ' +'</b>' + point['Sourcing_17'] + ' €' + '<br>') +
+          ('<b>'+'Products 2018: ' +'</b>' + point['Products_18'] + ' €' + '<br>') + 
+          ('<b>'+'Projects 2018: ' +'</b>' + point['Projects_18'] + ' €' + '<br>') +
+          ('<b>'+'Sourcing 2018: ' +'</b>' + point['Sourcing_18'] + ' €' + '<br>'));
 
         if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Group]);
