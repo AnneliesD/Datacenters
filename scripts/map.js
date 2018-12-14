@@ -128,7 +128,17 @@ $(window).on('load', function() {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
-          "<table>"+ 
+          "<style>table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}tr:nth-child(even) {
+  background-color: #dddddd;
+} </style><table>"+ 
                 "<tr>" + /*2014*/ 
                     "<td>" + 'Products 2014'+ "</td>"+ 
                     "<td>" + point['Products_14'] + ' €' + "</td>" +
